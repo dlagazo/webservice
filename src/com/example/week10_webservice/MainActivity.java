@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 		TextView tv = new TextView(this);
 		tv.setText(result);
 		this.setContentView(tv);
-		parseJSON(result);
+		parseJSON("{\"contact\":" + sb.toString() + "}");
 	}
 
 	public static InputStream getInputStreamFromUrl(String url)
@@ -85,12 +85,12 @@ public class MainActivity extends Activity {
 		{
 			
 			json = new JSONObject(string);
-			JSONArray apps = json.getJSONArray("news");
+			/*JSONArray apps = json.getJSONArray("news");
 			for(int i = 0; i < apps.length(); i++)
 			{
 				JSONObject temp = apps.getJSONObject(i);
 				Toast.makeText(getApplicationContext(), temp.getString("title"), Toast.LENGTH_SHORT).show();
-			}
+			}*/
 						
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
